@@ -14,6 +14,7 @@
 @interface MasterViewController () <UITableViewDataSource>
 
 @property NSMutableArray *objects;
+
 @end
 
 @implementation MasterViewController
@@ -122,6 +123,23 @@
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
+}
+
+-(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewRowAction *editAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Strike" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
+        ToDo *object = self.objects[indexPath.row];
+        object.isCompleted = YES;
+        [self.tableView reloadData];
+    }];
+    editAction.backgroundColor = [UIColor blueColor];
+    
+    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Delete"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
+        [self.objects removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }];
+    deleteAction.backgroundColor = [UIColor redColor];
+    return @[deleteAction,editAction];
 }
 
 
