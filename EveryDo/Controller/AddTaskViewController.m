@@ -29,7 +29,7 @@
 }
 
 - (IBAction)addTaskPressed:(UIButton *)sender {
-    ToDo *tdAdd = [[ToDo alloc]initWithTitle:self.titleInput.text Description:self.descriptionInput.text Priority:[self.priorityInput.text intValue]];
+    ToDo *tdAdd = [[ToDo alloc]initWithTitle:self.titleInput.text Description:self.descriptionInput.text Priority:[self.priorityInput.text intValue] isComplete:NO];
     [self.delegate addToDo:tdAdd];
     [self.navigationController popViewControllerAnimated:YES];
 }

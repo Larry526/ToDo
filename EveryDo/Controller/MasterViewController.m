@@ -25,11 +25,11 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
-    ToDo *toDo1 = [[ToDo alloc]initWithTitle:@"Kill some aliens." Description:@"Use pew pew gun." Priority:1];
-    ToDo *toDo2 = [[ToDo alloc]initWithTitle:@"Kill some monsters." Description:@"Use rocket launcher." Priority:3];
-    ToDo *toDo3 = [[ToDo alloc]initWithTitle:@"Kill some vampires." Description:@"Use holy water." Priority:5];
-    ToDo *toDo4 = [[ToDo alloc]initWithTitle:@"Kill some bandits." Description:@"Use stun gun." Priority:4];
-    ToDo *toDo5 = [[ToDo alloc]initWithTitle:@"Kill some ghosts." Description:@"Use proton pack." Priority:2];
+    ToDo *toDo1 = [[ToDo alloc]initWithTitle:@"Kill some aliens." Description:@"Use pew pew gun." Priority:1 isComplete:YES];
+    ToDo *toDo2 = [[ToDo alloc]initWithTitle:@"Kill some monsters." Description:@"Use rocket launcher." Priority:3 isComplete:NO];
+    ToDo *toDo3 = [[ToDo alloc]initWithTitle:@"Kill some vampires." Description:@"Use holy water." Priority:5 isComplete:YES];
+    ToDo *toDo4 = [[ToDo alloc]initWithTitle:@"Kill some bandits." Description:@"Use stun gun." Priority:4 isComplete:NO];
+    ToDo *toDo5 = [[ToDo alloc]initWithTitle:@"Kill some ghosts." Description:@"Use proton pack." Priority:2 isComplete:NO];
 
     self.objects = [@[toDo1, toDo2, toDo3, toDo4, toDo5]mutableCopy];
     
@@ -88,8 +88,25 @@
     cell.descriptionLabel.text = object.toDoDescription;
     cell.priorityLabel.text = [NSString stringWithFormat:@"Priority: %ld", object.priority];
     cell.backgroundColor = [UIColor grayColor];
+    
+    if (object.isCompleted == YES) {
+        
+        NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:object.toDoDescription];
+        [attributedString addAttribute:NSStrikethroughStyleAttributeName
+                                      value:@2
+                                      range:NSMakeRange(0, [attributedString length])];
+        cell.descriptionLabel.attributedText = attributedString;
+        
+        
+        attributedString = [[NSMutableAttributedString alloc] initWithString:object.title];
+        [attributedString addAttribute:NSStrikethroughStyleAttributeName
+                                value:@2
+                                range:NSMakeRange(0, [attributedString length])];
+        cell.titleLabel.attributedText = attributedString;
+    }
     return cell;
 }
+
 
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
