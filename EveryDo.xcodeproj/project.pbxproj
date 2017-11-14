@@ -14,6 +14,7 @@
 		0571D9B01FBB4C9800A395E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0571D9AF1FBB4C9800A395E4 /* Assets.xcassets */; };
 		0571D9B31FBB4C9800A395E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0571D9B11FBB4C9800A395E4 /* LaunchScreen.storyboard */; };
 		0571D9B61FBB4C9800A395E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0571D9B51FBB4C9800A395E4 /* main.m */; };
+		0571D9BE1FBB504700A395E4 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0571D9BD1FBB504700A395E4 /* ToDo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		0571D9B21FBB4C9800A395E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0571D9B41FBB4C9800A395E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0571D9B51FBB4C9800A395E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0571D9BC1FBB504700A395E4 /* ToDo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDo.h; sourceTree = "<group>"; };
+		0571D9BD1FBB504700A395E4 /* ToDo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				0571D9B11FBB4C9800A395E4 /* LaunchScreen.storyboard */,
 				0571D9B41FBB4C9800A395E4 /* Info.plist */,
 				0571D9B51FBB4C9800A395E4 /* main.m */,
+				0571D9BC1FBB504700A395E4 /* ToDo.h */,
+				0571D9BD1FBB504700A395E4 /* ToDo.m */,
 			);
 			path = EveryDo;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0571D9BE1FBB504700A395E4 /* ToDo.m in Sources */,
 				0571D9A81FBB4C9800A395E4 /* MasterViewController.m in Sources */,
 				0571D9A51FBB4C9800A395E4 /* AppDelegate.m in Sources */,
 				0571D9B61FBB4C9800A395E4 /* main.m in Sources */,
