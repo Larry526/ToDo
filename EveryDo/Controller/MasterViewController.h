@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddTaskViewController.h"
 
 @class DetailViewController;
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController <AddToDoDelegate>
 
 
 @end

@@ -35,19 +35,21 @@
     
 }
 
-
 - (void)viewWillAppear:(BOOL)animated {
 }
 
 - (void)insertNewObject:(id)sender {
-    if (!self.objects) {
-        self.objects = [[NSMutableArray alloc] init];
-    }
-    [self.objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self performSegueWithIdentifier:@"addTask" sender:self];
+
 }
 
+-(void)addToDo:(ToDo *)td {
+    [self.objects addObject:td];
+    [self.tableView reloadData];
+    
+    
+    
+}
 
 #pragma mark - Segues
 
@@ -57,8 +59,13 @@
         ToDo *object = self.objects[indexPath.row];
         DetailViewController *controller = (DetailViewController *)[segue destinationViewController];
         [controller setDetailItem:object];
+    } else if ([[segue identifier] isEqualToString:@"addTask"]){
+        AddTaskViewController *controller = (AddTaskViewController *)[segue destinationViewController];
+        controller.delegate = self;
     }
+    
 }
+
 
 
 #pragma mark - Table View

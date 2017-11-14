@@ -16,6 +16,7 @@
 		0571D9B61FBB4C9800A395E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0571D9B51FBB4C9800A395E4 /* main.m */; };
 		0571D9BE1FBB504700A395E4 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0571D9BD1FBB504700A395E4 /* ToDo.m */; };
 		0571D9C11FBB5F5400A395E4 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0571D9C01FBB5F5400A395E4 /* CustomTableViewCell.m */; };
+		0571D9C41FBB731600A395E4 /* AddTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0571D9C31FBB731600A395E4 /* AddTaskViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		0571D9BD1FBB504700A395E4 /* ToDo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDo.m; sourceTree = "<group>"; };
 		0571D9BF1FBB5F5400A395E4 /* CustomTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		0571D9C01FBB5F5400A395E4 /* CustomTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		0571D9C21FBB731600A395E4 /* AddTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddTaskViewController.h; sourceTree = "<group>"; };
+		0571D9C31FBB731600A395E4 /* AddTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddTaskViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,23 +70,57 @@
 		0571D9A21FBB4C9800A395E4 /* EveryDo */ = {
 			isa = PBXGroup;
 			children = (
+				0571D9CA1FBB97A000A395E4 /* Controller */,
+				0571D9C91FBB977200A395E4 /* View */,
+				0571D9C81FBB929500A395E4 /* Model */,
+				0571D9C71FBB927D00A395E4 /* Supporting */,
+				0571D9B41FBB4C9800A395E4 /* Info.plist */,
+			);
+			path = EveryDo;
+			sourceTree = "<group>";
+		};
+		0571D9C71FBB927D00A395E4 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
 				0571D9A31FBB4C9800A395E4 /* AppDelegate.h */,
 				0571D9A41FBB4C9800A395E4 /* AppDelegate.m */,
-				0571D9A61FBB4C9800A395E4 /* MasterViewController.h */,
-				0571D9A71FBB4C9800A395E4 /* MasterViewController.m */,
-				0571D9BF1FBB5F5400A395E4 /* CustomTableViewCell.h */,
-				0571D9C01FBB5F5400A395E4 /* CustomTableViewCell.m */,
-				0571D9A91FBB4C9800A395E4 /* DetailViewController.h */,
-				0571D9AA1FBB4C9800A395E4 /* DetailViewController.m */,
-				0571D9AC1FBB4C9800A395E4 /* Main.storyboard */,
-				0571D9AF1FBB4C9800A395E4 /* Assets.xcassets */,
-				0571D9B11FBB4C9800A395E4 /* LaunchScreen.storyboard */,
-				0571D9B41FBB4C9800A395E4 /* Info.plist */,
 				0571D9B51FBB4C9800A395E4 /* main.m */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		0571D9C81FBB929500A395E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				0571D9BC1FBB504700A395E4 /* ToDo.h */,
 				0571D9BD1FBB504700A395E4 /* ToDo.m */,
 			);
-			path = EveryDo;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0571D9C91FBB977200A395E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0571D9AC1FBB4C9800A395E4 /* Main.storyboard */,
+				0571D9B11FBB4C9800A395E4 /* LaunchScreen.storyboard */,
+				0571D9AF1FBB4C9800A395E4 /* Assets.xcassets */,
+				0571D9BF1FBB5F5400A395E4 /* CustomTableViewCell.h */,
+				0571D9C01FBB5F5400A395E4 /* CustomTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0571D9CA1FBB97A000A395E4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0571D9A61FBB4C9800A395E4 /* MasterViewController.h */,
+				0571D9A71FBB4C9800A395E4 /* MasterViewController.m */,
+				0571D9A91FBB4C9800A395E4 /* DetailViewController.h */,
+				0571D9AA1FBB4C9800A395E4 /* DetailViewController.m */,
+				0571D9C21FBB731600A395E4 /* AddTaskViewController.h */,
+				0571D9C31FBB731600A395E4 /* AddTaskViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0571D9C41FBB731600A395E4 /* AddTaskViewController.m in Sources */,
 				0571D9BE1FBB504700A395E4 /* ToDo.m in Sources */,
 				0571D9A81FBB4C9800A395E4 /* MasterViewController.m in Sources */,
 				0571D9C11FBB5F5400A395E4 /* CustomTableViewCell.m in Sources */,
