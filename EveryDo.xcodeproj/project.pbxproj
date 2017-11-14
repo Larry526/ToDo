@@ -15,6 +15,7 @@
 		0571D9B31FBB4C9800A395E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0571D9B11FBB4C9800A395E4 /* LaunchScreen.storyboard */; };
 		0571D9B61FBB4C9800A395E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0571D9B51FBB4C9800A395E4 /* main.m */; };
 		0571D9BE1FBB504700A395E4 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0571D9BD1FBB504700A395E4 /* ToDo.m */; };
+		0571D9C11FBB5F5400A395E4 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0571D9C01FBB5F5400A395E4 /* CustomTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		0571D9B51FBB4C9800A395E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0571D9BC1FBB504700A395E4 /* ToDo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDo.h; sourceTree = "<group>"; };
 		0571D9BD1FBB504700A395E4 /* ToDo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDo.m; sourceTree = "<group>"; };
+		0571D9BF1FBB5F5400A395E4 /* CustomTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		0571D9C01FBB5F5400A395E4 /* CustomTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				0571D9A41FBB4C9800A395E4 /* AppDelegate.m */,
 				0571D9A61FBB4C9800A395E4 /* MasterViewController.h */,
 				0571D9A71FBB4C9800A395E4 /* MasterViewController.m */,
+				0571D9BF1FBB5F5400A395E4 /* CustomTableViewCell.h */,
+				0571D9C01FBB5F5400A395E4 /* CustomTableViewCell.m */,
 				0571D9A91FBB4C9800A395E4 /* DetailViewController.h */,
 				0571D9AA1FBB4C9800A395E4 /* DetailViewController.m */,
 				0571D9AC1FBB4C9800A395E4 /* Main.storyboard */,
@@ -154,6 +159,7 @@
 			files = (
 				0571D9BE1FBB504700A395E4 /* ToDo.m in Sources */,
 				0571D9A81FBB4C9800A395E4 /* MasterViewController.m in Sources */,
+				0571D9C11FBB5F5400A395E4 /* CustomTableViewCell.m in Sources */,
 				0571D9A51FBB4C9800A395E4 /* AppDelegate.m in Sources */,
 				0571D9B61FBB4C9800A395E4 /* main.m in Sources */,
 				0571D9AB1FBB4C9800A395E4 /* DetailViewController.m in Sources */,
